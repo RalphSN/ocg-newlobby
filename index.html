@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OCG首頁版型</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<div class="home-container">
+  
+  <!--  Header  -->
+  <header class="navbar mb-4">
+    <div class="navbar__container">
+      <img
+        src="https://cdn.jsdelivr.net/gh/RalphSN/images@main/sainttime-images/logo_sainttime.png"
+        alt="Logo"
+        class="logo"
+      />
+    </div>
+  </header>
+
+  <main class="d-flex flex-column gap-4">
+
+    <!--  上半部：輪播 + 排行榜  -->
+    <div class="main-banner">
+
+      <!-- 左：輪播 -->
+      <div class="cover">
+        <div id="carouselBanner" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./images/cover01.png"
+                class="d-block w-100"
+                alt="Banner1"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./images/cover02.png"
+                class="d-block w-100"
+                alt="Banner2"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./images/cover03.png"
+                class="d-block w-100"
+                alt="Banner3"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./images/cover04.png"
+                class="d-block w-100"
+                alt="Banner3"
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselBanner"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselBanner"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 右：排行榜 -->
+      <div class="ranking">
+        <h5 class="rank-heading">排行榜</h5>
+        <ol class="rank-list list-unstyled">
+          <li>
+            <a href="#" class="rank-item">
+              <div class="rank-num">1</div>
+              <img src="./images/game-item.png" alt="" />
+              <div class="rank-text">
+                <h6 class="rank-title">原神啟動</h6>
+                <p class="rank-content">快樂水快樂水</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="rank-item">
+              <div class="rank-num">2</div>
+              <img src="./images/game-item.png" alt="" />
+              <div class="rank-text">
+                <h6 class="rank-title">原神啟動</h6>
+                <p class="rank-content">快樂水快樂水</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="rank-item">
+              <div class="rank-num">3</div>
+              <img src="./images/game-item.png" alt="" />
+              <div class="rank-text">
+                <h6 class="rank-title">原神啟動</h6>
+                <p class="rank-content">快樂水快樂水</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="rank-item">
+              <div class="rank-num">4</div>
+              <img src="./images/game-item.png" alt="" />
+              <div class="rank-text">
+                <h6 class="rank-title">原神啟動</h6>
+                <p class="rank-content">快樂水快樂水</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="rank-item">
+              <div class="rank-num">5</div>
+              <img src="./images/game-item.png" alt="" />
+              <div class="rank-text">
+                <h6 class="rank-title">原神啟動</h6>
+                <p class="rank-content">快樂水快樂水</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="rank-item">
+              <div class="rank-num">6</div>
+              <img src="./images/game-item.png" alt="" />
+              <div class="rank-text">
+                <h6 class="rank-title">原神啟動</h6>
+                <p class="rank-content">快樂水快樂水</p>
+              </div>
+            </a>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <!--  下半部：熱門遊戲 + 廣告區  -->
+    <div class="row gx-4 main-content">
+
+      <!-- 熱門免費遊戲 -->
+      <h4 class="game-section__heading">熱門免費遊戲</h4>
+      <div class="col-lg-9">
+        <div class="game-section">
+
+          <!-- 1-4 games -->
+          <div class="game-card">
+            <img src="./images/card-image.png" class="card-image" />
+            <div class="card-content">
+              <h2 class="card-title">原神啟動</h2>
+              <a href="#" class="btn--play">PLAY</a>
+            </div>
+          </div>
+          <div class="game-card">
+            <img src="./images/card-image.png" class="card-image" />
+            <div class="card-content">
+              <h2 class="card-title">原神啟動</h2>
+              <a href="#" class="btn--play">PLAY</a>
+            </div>
+          </div>
+          <div class="game-card">
+            <img src="./images/card-image.png" class="card-image" />
+            <div class="card-content">
+              <h2 class="card-title">原神啟動</h2>
+              <a href="#" class="btn--play">PLAY</a>
+            </div>
+          </div>
+          <div class="game-card">
+            <img src="./images/card-image.png" class="card-image" />
+            <div class="card-content">
+              <h2 class="card-title">原神啟動</h2>
+              <a href="#" class="btn--play">PLAY</a>
+            </div>
+          </div>
+
+          <!-- 手機廣告 -->
+          <a href="#" class="ad-banner mobile-only">
+            <img src="./images/ads-banner.png" />
+          </a>
+
+          <!-- 5-6 games -->
+          <div class="game-card">
+            <img src="./images/card-image.png" class="card-image" />
+            <div class="card-content">
+              <h2 class="card-title">原神啟動</h2>
+              <a href="#" class="btn--play">PLAY</a>
+            </div>
+          </div>
+          <div class="game-card">
+            <img src="./images/card-image.png" class="card-image" />
+            <div class="card-content">
+              <h2 class="card-title">原神啟動</h2>
+              <a href="#" class="btn--play">PLAY</a>
+            </div>
+          </div>
+
+          <!-- 桌機廣告 -->
+          <a href="#" class="ad-banner desktop-only">
+            <img src="./images/ads-banner.png" />
+          </a>
+
+          <!-- 7-8 games -->
+          <div class="game-card">
+            <img src="./images/card-image.png" class="card-image" />
+            <div class="card-content">
+              <h2 class="card-title">原神啟動</h2>
+              <a href="#" class="btn--play">PLAY</a>
+            </div>
+          </div>
+          <div class="game-card">
+            <img src="./images/card-image.png" class="card-image" />
+            <div class="card-content">
+              <h2 class="card-title">原神啟動</h2>
+              <a href="#" class="btn--play">PLAY</a>
+            </div>
+          </div>
+
+          <!-- 手機廣告 -->
+          <a href="#" class="ad-banner mobile-only">
+            <img src="./images/ads-banner.png" />
+          </a>
+
+          <!-- 9 games -->
+          <div class="game-card">
+            <img src="./images/card-image.png" class="card-image" />
+            <div class="card-content">
+              <h2 class="card-title">原神啟動</h2>
+              <a href="#" class="btn--play">PLAY</a>
+            </div>
+          </div>
+
+          <!-- 10-12 games -->
+          <div class="game-card">
+            <img src="./images/card-image.png" class="card-image" />
+            <div class="card-content">
+              <h2 class="card-title">原神啟動</h2>
+              <a href="#" class="btn--play">PLAY</a>
+            </div>
+          </div>
+          <div class="game-card">
+            <img src="./images/card-image.png" class="card-image" />
+            <div class="card-content">
+              <h2 class="card-title">原神啟動</h2>
+              <a href="#" class="btn--play">PLAY</a>
+            </div>
+          </div>
+          <div class="game-card">
+            <img src="./images/card-image.png" class="card-image" />
+            <div class="card-content">
+              <h2 class="card-title">原神啟動</h2>
+              <a href="#" class="btn--play">PLAY</a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn--more">更多遊戲</a>
+      </div>
+      
+
+      <!-- 廣告 + 預約 -->
+      <div class="col-lg-3">
+        <div class="fixed-ads mb-4">
+          <img src="./images/ad01.png" alt="Ad1" />
+          <img src="./images/ad02.png" alt="Ad2" />
+          <img src="./images/ad03.png" alt="Ad3" />
+        </div>
+        <div class="pre-order">
+          <h5 class="pre-order__heading">搶先預約</h5>
+            <div class="pre-order__box">
+              <div class="pre-order__item">
+                <figure class="pre-order__img"><img src="./images/game-item.png" alt=""></figure>
+                <div class="pre-order__content">
+                  <p class="pre-order__title">三國:爭霸</p>
+                  <a href="#" class="btn--reserve">預約</a>
+                </div>
+              </div>
+              <div class="pre-order__item">
+                <figure class="pre-order__img"><img src="./images/game-item.png" alt=""></figure>
+                <div class="pre-order__content">
+                  <p class="pre-order__title">三國:爭霸</p>
+                  <a href="#" class="btn--reserve">預約</a>
+                </div>
+              </div>
+              <div class="pre-order__item">
+                <figure class="pre-order__img"><img src="./images/game-item.png" alt=""></figure>
+                <div class="pre-order__content">
+                  <p class="pre-order__title">三國:爭霸</p>
+                  <a href="#" class="btn--reserve">預約</a>
+                </div>
+              </div>
+              <div class="pre-order__item">
+                <figure class="pre-order__img"><img src="./images/game-item.png" alt=""></figure>
+                <div class="pre-order__content">
+                  <p class="pre-order__title">三國:爭霸</p>
+                  <a href="#" class="btn--reserve">預約</a>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

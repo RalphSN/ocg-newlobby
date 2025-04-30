@@ -1,0 +1,414 @@
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.game-card img,
+.fixed-ads img,
+.pre-order img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Header(暫時採用原本的) */
+.navbar {
+  background: black;
+  color: #fff;
+  position: relative;
+  z-index: 1000;
+}
+.navbar__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: relative;
+}
+.logo {
+  height: 40px;
+}
+
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  
+  .home-container {
+    margin: 0 2%;
+  }
+}
+
+/* 輪播 + 排行榜 */
+.main-banner {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.main-banner .cover {
+  flex: 8;
+  overflow: hidden;
+  width: 100%;
+}
+
+.main-banner .cover img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel {
+  flex: 1;
+}
+
+.main-banner .ranking {
+  flex: 2;
+}
+
+.carousel-control-prev {
+  left: -30px;
+}
+
+.carousel-control-next {
+  right: -30px;
+}
+
+/* 排行榜 */
+.ranking {
+  background-color: white;
+  color: black;
+  padding: 15px;
+  border-radius: 8px;
+  height: auto;
+  min-height: 100%;
+  max-width: 100%;
+}
+
+.ranking .rank-item {
+  display: flex;
+  margin-bottom: 15px;
+  white-space: nowrap;
+}
+
+.ranking .rank-item img {
+  height: 50px;
+  margin-right: 15px;
+}
+
+.ranking .rank-item .rank-num {
+  margin-right: 15px;
+  align-self: center;
+  text-align: center;
+}
+
+.ranking .rank-item .rank-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ranking .rank-item .rank-text .rank-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+}
+
+.ranking .rank-item .rank-text .rank-content {
+  margin: 0;
+  font-size: 16px;
+  color: grey;
+}
+
+@media (max-width: 768px) {
+
+  .rank-heading {
+    display: none;
+  }
+
+  .ranking {
+    border-radius: 0;
+    margin: 0 auto;
+    padding-bottom: 0;
+    overflow-x: scroll;
+  }
+
+  .rank-list {
+    display: flex;
+  }
+
+  .ranking .rank-item {
+    margin-bottom: 0;
+    margin-right: 0.5rem;
+    padding-right: 0.5rem;
+    border-right: 1px solid grey;
+  }
+
+  .ranking .rank-list li:last-child .rank-item {
+    border-right: none;
+  }
+}
+
+.col-lg-9 {
+  flex: 7;
+}
+
+.col-lg-3 {
+  flex: 2;
+}
+
+.game-section__heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.game-section__heading::before {
+  content: "";
+  display: inline-block;
+  width: 0.4rem;
+  height: 1.5em;
+  background-color: #917355;
+  margin-right: 20px;
+}
+
+.game-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.game-section .ad-banner {
+  grid-column: 1/-1;
+}
+
+.game-section .game-card {
+  display: flex;
+  flex-direction: column;
+
+  height: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid white;
+}
+
+.game-section .game-card .card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-bottom: 1px solid white;
+}
+
+.game-section .game-card .card-content {
+  padding: 1.2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.game-section .game-card .card-content .card-title {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.game-section .game-card .card-content .btn--play {
+  padding: 0.6rem 1rem;
+  font-weight: 700;
+  background-color: #ef5285;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+}
+
+.game-section .game-card .card-content .btn--play:hover {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 1em transparent;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #ef5285;
+  }
+}
+
+.btn--more {
+  border: 1px solid white;
+  padding: 10px;
+  display: inline-block; 
+  grid-column: 1/-1;
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.35s;
+}
+
+.btn--more:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+
+.ad-banner img {
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+.fixed-ads img {
+  margin-bottom: 10px;
+}
+
+.mobile-only {
+  display: none;
+}
+.desktop-only {
+  display: block;
+}
+
+.pre-order__heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.pre-order__heading::before {
+  content: "";
+  display: inline-block;
+  width: 0.4rem;
+  height: 1.5em;
+  background-color: #917355;
+  margin-right: 20px;
+}
+
+.pre-order .pre-order__box .pre-order__item {
+  display: flex;
+  margin-bottom: 2rem;
+  width: 100%;
+  border-bottom: 1px solid white;
+}
+
+.pre-order .pre-order__box .pre-order__item .pre-order__img {
+  position: relative;
+  width: 5rem;
+  margin-right: 1rem;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pre-order .pre-order__box .pre-order__item .pre-order__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pre-order .pre-order__box .pre-order__item .pre-order__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.pre-order
+  .pre-order__box
+  .pre-order__item
+  .pre-order__content
+  .pre-order__title {
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  margin-bottom: 1.2rem;
+}
+
+.btn--reserve {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #917355;
+  display: flex;
+  justify-content: center;
+  align-self: start;
+  background-color: white;
+  color: black;
+  letter-spacing: 0.1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn--reserve:hover {
+  color: black;
+  background-color: white;
+  transition: 0.35s;
+  animation: pulse-rev 1s;
+  box-shadow: 0 0 0 1em transparent;
+}
+
+@keyframes pulse-rev {
+  0% {
+    box-shadow: 0 0 0 0 white;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .game-section {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-banner {
+    flex-direction: column;
+  }
+
+  .game-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .mobile-only {
+    display: block;
+  }
+  .desktop-only {
+    display: none;
+  }
+}
+
+@media (max-width: 430px) {
+  .game-section .game-card .card-content {
+    padding: 10px 15px;
+  }
+
+  .btn--play {
+    transform: scale(0.9);
+  }
+}
